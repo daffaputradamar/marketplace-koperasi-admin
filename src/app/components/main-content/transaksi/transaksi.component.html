@@ -1,3 +1,124 @@
-<p>
-  transaksi works!
-</p>
+<div class="mb-4">
+  <h4>Transaksi</h4>
+  <small class="text-muted">Daftar transaksi pelanggan</small>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <table class="table table-striped table-responsive mt-4">
+      <thead>
+        <tr>
+          <th>No</th>
+          <th>Tanggal</th>
+          <th>Nama Usaha</th>
+          <th>Total</th>
+          <th>Status</th>
+          <th>Aksi</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>12/02/2018</td>
+          <td>Toko Suka Maju</td>
+          <td>Rp. 50.000</td>
+          <td>Belum Dikonfirmasi</td>
+          <td>
+            <div class="btn-group" role="group" aria-label="">
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#detailPembelian">
+                Detail
+              </button>
+              <button type="button" class="btn btn-success" data-toggle="modal" data-target="#lihatBukti">
+                Lihat Bukti
+              </button>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>12/02/2018</td>
+          <td>Toko Suka Mundur</td>
+          <td>Rp. 100.000</td>
+          <td>Sudah Dikonfirmasi</td>
+          <td>
+            <div class="btn-group" role="group" aria-label="">
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#detailPembelian">
+                Detail
+              </button>
+              <button type="button" class="btn btn-success" data-toggle="modal" data-target="#lihatBukti">
+                Lihat Bukti
+              </button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- Modal Lihat Bukti -->
+<div class="modal fade" id="lihatBukti" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-body text-center p-3">
+        <img src="assets/sample-invoice.png" class="img-fluid" />
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success" data-dismiss="modal">Konfirmasi</button>
+        <button type="button" class="btn btn-danger">Tolak</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Detail Pembelian -->
+<div class="modal fade" id="detailPembelian" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="modelTitleId">Detail Pembelian</h4>
+      </div>
+      <div class="modal-body">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>No</th>
+              <th>Nama Barang</th>
+              <th>Harga</th>
+              <th>Jumlah</th>
+              <th>Subtotal</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Pensil</td>
+              <td>Rp. 3.000</td>
+              <td>3</td>
+              <td>Rp. 9.000</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Baju Akatsuki</td>
+              <td>Rp. 50.000</td>
+              <td>4</td>
+              <td>Rp. 200.000</td>
+            </tr>
+            <tr>
+              <th colspan="4" class="text-right">Total Pembelian</th>
+              <td>Rp. 209.000</td>
+            </tr>
+            <tr>
+              <th colspan="4" class="text-right">Ongkos Kirim</th>
+              <td>Rp. 20.000</td>
+            </tr>
+            <tr>
+              <th colspan="4" class="text-right">Total Bayar</th>
+              <td class="text-lg text-success"><b>Rp. 229.000</b></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
