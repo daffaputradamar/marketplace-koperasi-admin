@@ -1,6 +1,8 @@
 .sidebardiv {
   width: 20%;
   height: 100vh;
+  position: relative;
+  top: 0px;
 }
 .ul {
   /* margin-top: 10px; */
@@ -17,4 +19,5 @@ ul a:hover {
 
 ul li {
   margin-left: 10px;
+  padding-top: 20px;
 }
