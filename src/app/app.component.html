@@ -1,9 +1,25 @@
 <app-navbar></app-navbar>
-<!-- <div class="row"> -->
-<!-- <div class="col-md-3"> -->
-<app-sidebar></app-sidebar>
-<!-- </div> -->
-<!-- <div class="col-md-9"> -->
-<app-main-content></app-main-content>
-<!-- </div> -->
-<!-- </div> -->
+
+<div class="container-fluid mt-4">
+    <div class="row">
+        <div class="col-2">
+            <div class="list-group" id="list-tab" role="tablist">
+                <a class="list-group-item list-group-item-action active" id="list-transaksi-list" data-toggle="list"
+                    href="#list-transaksi" role="tab" aria-controls="list-transaksi-list"> <span class="far fa-money-bill-alt"></span>
+                    Transaksi</a>
+                <a class="list-group-item list-group-item-action" id="list-saldo-list" data-toggle="list" href="#list-saldo"
+                    role="tab" aria-controls="saldo"><span class="fas fa-balance-scale"></span> Saldo</a>
+            </div>
+        </div>
+        <div class="col-10">
+            <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="list-transaksi" role="tabpanel" aria-labelledby="list-transaksi-list">
+                    <app-transaksi></app-transaksi>
+                </div>
+                <div class="tab-pane fade" id="list-saldo" role="tabpanel" aria-labelledby="list-saldo-list">
+                    <app-saldo></app-saldo>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
