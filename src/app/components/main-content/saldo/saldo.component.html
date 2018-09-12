@@ -1,3 +1,248 @@
-<p>
-  saldo works!
-</p>
+<div class="container">
+  <h3 class="mb-4">Saldo Admin</h3>
+
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-success mb-3" data-toggle="modal" data-target="#ubahSaldo">
+    Ubah Saldo
+  </button>
+
+  <ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active" id="jual-beli-tab" data-toggle="tab" href="#jual-beli" role="tab" aria-controls="jual-beli"
+        aria-selected="true">
+        Saldo Jual Beli
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="wajib-tab" data-toggle="tab" href="#wajib" role="tab" aria-controls="wajib" aria-selected="true">
+        Saldo Wajib
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="sukarela-tab" data-toggle="tab" href="#sukarela" role="tab" aria-controls="sukarela"
+        aria-selected="true">
+        Saldo Sukarela
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="pokok-tab" data-toggle="tab" href="#pokok" role="tab" aria-controls="pokok" aria-selected="false">
+        Saldo Pokok
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="sisa-hasil-usaha-tab" data-toggle="tab" href="#sisa-hasil-usaha" role="tab" aria-controls="sisa-hasil-usaha"
+        aria-selected="false">
+        Sisa Hasil Usaha</a>
+    </li>
+  </ul>
+
+  <div class="tab-content pt-4" id="myTabContent">
+    <div class="tab-pane fade show active" id="jual-beli" role="tabpanel" aria-labelledby="jual-beli-tab">
+      <p id="helpId" class="text-muted float-left"><small>Saldo Saya</small></p>
+      <button type="button" class="btn btn-outline-secondary float-right" data-toggle="modal" data-target="#modelQuestionJualBeli">
+        <i class="fas fa-question"></i>
+      </button>
+      <div class="clearfix"></div>
+      <h2>Rp. 600.000</h2>
+
+
+      <button type="button" class="btn btn-primary mt-3" data-toggle="modal" data-target="#modelLog">
+        <span>Log Saldo</span>
+      </button>
+    </div>
+
+    <div class="tab-pane fade show" id="wajib" role="tabpanel" aria-labelledby="wajib-tab">
+      <p id="helpId" class="text-muted float-left"><small>Saldo Saya</small></p>
+      <button type="button" class="btn btn-outline-secondary float-right" data-toggle="modal" data-target="#modelQuestionWajib">
+        <i class="fas fa-question"></i>
+      </button>
+      <div class="clearfix"></div>
+      <h2>Rp. 800.000</h2>
+
+      <button type="button" class="btn btn-primary mt-3" data-toggle="modal" data-target="#modelLog">
+        <span>Log Saldo</span>
+      </button>
+    </div>
+
+    <div class="tab-pane fade show" id="sukarela" role="tabpanel" aria-labelledby="sukarela-tab">
+      <p id="helpId" class="text-muted float-left"><small>Saldo Saya</small></p>
+      <button type="button" class="btn btn-outline-secondary float-right" data-toggle="modal" data-target="#modelQuestionSukarela">
+        <i class="fas fa-question"></i>
+      </button>
+      <div class="clearfix"></div>
+      <h2>Rp. 1.000.000</h2>
+
+      <button type="button" class="btn btn-primary mt-3" data-toggle="modal" data-target="#modelLog">
+        <span>Log Saldo</span>
+      </button>
+    </div>
+
+    <div class="tab-pane fade" id="pokok" role="tabpanel" aria-labelledby="pokok-tab">
+      <p id="helpId" class="text-muted float-left"><small>Saldo Saya</small></p>
+      <button type="button" class="btn btn-outline-secondary float-right" data-toggle="modal" data-target="#modelQuestionPokok">
+        <i class="fas fa-question"></i>
+      </button>
+      <div class="clearfix"></div>
+      <h2>Rp. 300.000</h2>
+
+      <button type="button" class="btn btn-primary mt-3" data-toggle="modal" data-target="#modelLog">
+        <span>Log Saldo</span>
+      </button>
+    </div>
+    <div class="tab-pane fade" id="sisa-hasil-usaha" role="tabpanel" aria-labelledby="sisa-hasil-usaha-tab">
+      <p id="helpId" class="text-muted float-left"><small>Saldo Saya</small></p>
+      <button type="button" class="btn btn-outline-secondary float-right" data-toggle="modal" data-target="#modelQuestionSisaHasilUsaha">
+        <i class="fas fa-question"></i>
+      </button>
+      <div class="clearfix"></div>
+      <h2>Rp. 400.000</h2>
+
+      <button type="button" class="btn btn-primary mt-3" data-toggle="modal" data-target="#modelLog">
+        <span>Log Saldo</span>
+      </button>
+    </div>
+  </div>
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="modelLog" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="modelTitleId">Log Saldo</h4>
+        </div>
+        <div class="modal-body">
+
+          <span class="text-secondary small">12/02/2018</span>
+          <div class="alert alert-success" role="alert">
+            <strong>Saldo bertambah sebesar Rp. 100.000</strong>
+          </div>
+
+          <span class="text-secondary small">20/02/2018</span>
+          <div class="alert alert-danger" role="alert">
+            <strong>Saldo berkurang sebesar Rp. 50.000 untuk pembayaran pembelian</strong>
+          </div>
+
+          <span class="text-secondary small">30/02/2018</span>
+          <div class="alert alert-success" role="alert">
+            <strong>Anda melakukan top up sebesar Rp. 50.000</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Question -->
+  <div class="modal fade" id="modelQuestionJualBeli" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <h5>Apa Itu Saldo Jual Beli ?</h5>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero iure est eaque sequi eos! Iure sit placeat
+            excepturi quia velit, tempora, aliquid laborum nihil ad aspernatur enim reiciendis delectus quod.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Question -->
+  <div class="modal fade" id="modelQuestionWajib" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <h5>Apa Itu Saldo Wajib ?</h5>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero iure est eaque sequi eos! Iure sit placeat
+            excepturi quia velit, tempora, aliquid laborum nihil ad aspernatur enim reiciendis delectus quod.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Question -->
+  <div class="modal fade" id="modelQuestionPokok" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <h5>Apa Itu Saldo Pokok ?</h5>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero iure est eaque sequi eos! Iure sit placeat
+            excepturi quia velit, tempora, aliquid laborum nihil ad aspernatur enim reiciendis delectus quod.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Question -->
+  <div class="modal fade" id="modelQuestionSisaHasilUsaha" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <h5>Apa Itu Sisa Hasil Usaha ?</h5>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero iure est eaque sequi eos! Iure sit placeat
+            excepturi quia velit, tempora, aliquid laborum nihil ad aspernatur enim reiciendis delectus quod.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Question -->
+  <div class="modal fade" id="modelQuestionSukarela" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <h5>Apa Itu Saldo Sukarela ?</h5>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero iure est eaque sequi eos! Iure sit placeat
+            excepturi quia velit, tempora, aliquid laborum nihil ad aspernatur enim reiciendis delectus quod.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" tabindex="-1" role="dialog" id="ubahSaldo" aria-labelledby="ubahSaldo" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="modelTitleId">Ubah Saldo</h4>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="">Aksi</label>
+          <select class="form-control">
+            <option disabled selected>Pilih Aksi</option>
+            <option>Tambah</option>
+            <option>Kurangi</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="">Jenis Saldo</label>
+          <select class="form-control">
+            <option disabled selected>Pilih Jenis Saldo</option>
+            <option>Saldo Jual Beli</option>
+            <option>Saldo Wajib</option>
+            <option>Saldo Sukarela</option>
+            <option>Saldo Pokok</option>
+            <option>Sisa Hasil Usaha</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="">Jumlah</label>
+          <input type="text" class="form-control" placeholder="Masukkan Jumlah" />
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Batal</button>
+        <button type="button" class="btn btn-primary">Simpan</button>
+      </div>
+    </div>
+  </div>
+</div>

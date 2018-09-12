@@ -8,6 +8,7 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { MainContentComponent } from './components/main-content/main-content.component';
 import { TransaksiComponent } from './components/main-content/transaksi/transaksi.component';
 import { SaldoComponent } from './components/main-content/saldo/saldo.component';
+import { UsahaComponent } from './components/main-content/usaha/usaha.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { SaldoComponent } from './components/main-content/saldo/saldo.component'
     SidebarComponent,
     MainContentComponent,
     TransaksiComponent,
-    SaldoComponent
+    SaldoComponent,
+    UsahaComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,90 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th>No</th>
+      <th>Nama</th>
+      <th>Nama Bank</th>
+      <th>Nomor Rekening</th>
+      <th>Saldo Jual Beli</th>
+      <th>Sisa Hasil Usaha</th>
+      <th>Aksi</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Suka Maju</td>
+      <td>BRI</td>
+      <td>75385382</td>
+      <td>Rp. 3.000.000</td>
+      <td>Rp. 1.000.000</td>
+      <td>
+        <div class="btn-group" role="group" aria-label="">
+          <button type="button" class="btn btn-primary">Lihat Detail</button>
+          <button type="button" class="btn btn-success" data-toggle="modal" data-target="#ubahSaldoUsaha">
+            Ubah Saldo
+          </button>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Suka Mundur</td>
+      <td>BCA</td>
+      <td>53256325</td>
+      <td>Rp. 5.000.000</td>
+      <td>Rp. 2.000.000</td>
+      <td>
+        <div class="btn-group" role="group" aria-label="">
+          <button type="button" class="btn btn-primary">Lihat Detail</button>
+          <button type="button" class="btn btn-success" data-toggle="modal" data-target="#ubahSaldoUsaha">
+            Ubah Saldo
+          </button>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+<div class="modal fade" tabindex="-1" role="dialog" id="ubahSaldoUsaha" aria-labelledby="ubahSaldoUsaha" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="modelTitleId">Ubah Saldo</h4>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="">Aksi</label>
+          <select class="form-control">
+            <option disabled selected>Pilih Aksi</option>
+            <option>Tambah</option>
+            <option>Kurangi</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="">Jenis Saldo</label>
+          <select class="form-control">
+            <option disabled selected>Pilih Jenis Saldo</option>
+            <option>Saldo Jual Beli</option>
+            <option>Saldo Wajib</option>
+            <option>Saldo Sukarela</option>
+            <option>Saldo Pokok</option>
+            <option>Sisa Hasil Usaha</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="">Jumlah</label>
+          <input type="text" class="form-control" placeholder="Masukkan Jumlah" />
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Batal</button>
+        <button type="button" class="btn btn-primary">Simpan</button>
+      </div>
+    </div>
+  </div>
+</div>
