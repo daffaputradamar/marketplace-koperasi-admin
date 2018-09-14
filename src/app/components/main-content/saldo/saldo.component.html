@@ -1,9 +1,14 @@
 <div class="container">
   <h3 class="mb-4">Saldo Admin</h3>
 
+
   <!-- Button trigger modal -->
-  <button type="button" class="btn btn-success mb-3" data-toggle="modal" data-target="#ubahSaldo">
-    Ubah Saldo
+  <button type="button" class="btn btn-success mb-3 mr-3" data-toggle="modal" data-target="#tambahSaldo">
+    Tambah Saldo
+  </button>
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-danger mb-3" data-toggle="modal" data-target="#kurangiSaldo">
+    Kurangi Saldo
   </button>
 
   <ul class="nav nav-tabs" id="myTab" role="tablist">
@@ -52,16 +57,70 @@
     </div>
 
     <div class="tab-pane fade show" id="wajib" role="tabpanel" aria-labelledby="wajib-tab">
-      <p id="helpId" class="text-muted float-left"><small>Saldo Saya</small></p>
-      <button type="button" class="btn btn-outline-secondary float-right" data-toggle="modal" data-target="#modelQuestionWajib">
-        <i class="fas fa-question"></i>
-      </button>
-      <div class="clearfix"></div>
-      <h2>Rp. 800.000</h2>
 
-      <button type="button" class="btn btn-primary mt-3" data-toggle="modal" data-target="#modelLog">
-        <span>Log Saldo</span>
-      </button>
+      <div class="row">
+        <div class="col-md-4">
+          <p id="helpId" class="text-muted float-left"><small>Saldo Saya</small></p>
+          <button type="button" class="btn btn-outline-secondary float-right" data-toggle="modal" data-target="#modelQuestionWajib">
+            <i class="fas fa-question"></i>
+          </button>
+          <div class="clearfix"></div>
+          <h2>Rp. 800.000</h2>
+
+          <button type="button" class="btn btn-primary mt-3" data-toggle="modal" data-target="#modelLog">
+            <span>Log Saldo</span>
+          </button>
+        </div>
+
+        <div class="col-md-8">
+          <div class="form-group">
+            <label for="">Nama Usaha</label>
+            <select class="custom-select" name="" id="">
+              <option selected>Pilih Usaha</option>
+              <option value="">Suka Maju</option>
+              <option value="">Suka Mundur</option>
+              <option value="">Makin Jaya</option>
+            </select>
+          </div>
+
+          <table class="table table-striped">
+            <thead class="thead-inverse|thead-default">
+              <tr>
+                <th>No</th>
+                <th>Bulan</th>
+                <th>Tahun</th>
+                <th>Jumlah</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Februari</td>
+                <td>2018</td>
+                <td>200.000</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Maret</td>
+                <td>2018</td>
+                <td>200.000</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>April</td>
+                <td>2018</td>
+                <td>200.000</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Mei</td>
+                <td>2018</td>
+                <td>200.000</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
 
     <div class="tab-pane fade show" id="sukarela" role="tabpanel" aria-labelledby="sukarela-tab">
@@ -104,7 +163,7 @@
   </div>
 
 
-  <!-- Modal -->
+  <!-- Modal Log -->
   <div class="modal fade" id="modelLog" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
@@ -115,17 +174,22 @@
 
           <span class="text-secondary small">12/02/2018</span>
           <div class="alert alert-success" role="alert">
-            <strong>Saldo bertambah sebesar Rp. 100.000</strong>
+            <strong>Saldo bertambah sebesar Rp. 100.000 dari user nindra</strong>
           </div>
 
           <span class="text-secondary small">20/02/2018</span>
           <div class="alert alert-danger" role="alert">
-            <strong>Saldo berkurang sebesar Rp. 50.000 untuk pembayaran pembelian</strong>
+            <strong>Saldo berkurang sebesar Rp. 100.000 untuk usaha suka maju</strong>
           </div>
 
-          <span class="text-secondary small">30/02/2018</span>
+          <span class="text-secondary small">21/02/2018</span>
           <div class="alert alert-success" role="alert">
-            <strong>Anda melakukan top up sebesar Rp. 50.000</strong>
+            <strong>Saldo bertambah sebesar Rp. 300.000 dari user daffa</strong>
+          </div>
+
+          <span class="text-secondary small">22/02/2018</span>
+          <div class="alert alert-danger" role="alert">
+            <strong>Saldo berkurang sebesar Rp. 300.000 untuk usaha suka mundur</strong>
           </div>
         </div>
       </div>
@@ -204,22 +268,14 @@
 </div>
 
 
-<!-- Modal -->
-<div class="modal fade" tabindex="-1" role="dialog" id="ubahSaldo" aria-labelledby="ubahSaldo" aria-hidden="true">
+<!-- Modal Tambah Saldo -->
+<div class="modal fade" tabindex="-1" role="dialog" id="tambahSaldo" aria-labelledby="tambahSaldo" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h4 class="modal-title" id="modelTitleId">Ubah Saldo</h4>
+        <h4 class="modal-title" id="modelTitleId">Tambah Saldo</h4>
       </div>
       <div class="modal-body">
-        <div class="form-group">
-          <label for="">Aksi</label>
-          <select class="form-control">
-            <option disabled selected>Pilih Aksi</option>
-            <option>Tambah</option>
-            <option>Kurangi</option>
-          </select>
-        </div>
 
         <div class="form-group">
           <label for="">Jenis Saldo</label>
@@ -230,6 +286,63 @@
             <option>Saldo Sukarela</option>
             <option>Saldo Pokok</option>
             <option>Sisa Hasil Usaha</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="">Dari</label>
+          <select class="form-control">
+            <option disabled selected>Pilih Asal Saldo</option>
+            <option>Item 1</option>
+            <option>Item 2</option>
+            <option>Item 3</option>
+            <option>Item 4</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="">Jumlah</label>
+          <input type="text" class="form-control" placeholder="Masukkan Jumlah" />
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Batal</button>
+        <button type="button" class="btn btn-primary">Simpan</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Kurangi Saldo -->
+<div class="modal fade" tabindex="-1" role="dialog" id="kurangiSaldo" aria-labelledby="kurangiSaldo" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="modelTitleId">Kurangi Saldo</h4>
+      </div>
+      <div class="modal-body">
+
+        <div class="form-group">
+          <label for="">Jenis Saldo</label>
+          <select class="form-control">
+            <option disabled selected>Pilih Jenis Saldo</option>
+            <option>Saldo Jual Beli</option>
+            <option>Saldo Wajib</option>
+            <option>Saldo Sukarela</option>
+            <option>Saldo Pokok</option>
+            <option>Sisa Hasil Usaha</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="">Ke</label>
+          <select class="form-control">
+            <option disabled selected>Pilih Tujuan Saldo</option>
+            <option>Item 1</option>
+            <option>Item 2</option>
+            <option>Item 3</option>
+            <option>Item 4</option>
           </select>
         </div>
 
